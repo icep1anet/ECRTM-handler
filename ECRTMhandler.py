@@ -13,7 +13,7 @@ class DataHandler:
     def __init__(self, bow, batch_size=200, device='cpu', as_tensor=False, vocab=[]):
         if device != "cpu":
             torch.cuda.empty_cache()
-        print("cache clear")
+            print("cache clear")
         # train_bow: NxV
         # test_bow: Nxv
         # word_emeddings: VxD
