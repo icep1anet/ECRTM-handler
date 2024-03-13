@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from scipy import sparse
 
 class DataHandler:
-    def __init__(self, bow, batch_size=200, device='cpu', as_tensor=False, vocab=[]):
+    def __init__(self, bow, vocab, batch_size=200, device='cpu', as_tensor=True):
         if device != "cpu":
             torch.cuda.empty_cache()
             print("cache clear")
